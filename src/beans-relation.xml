@@ -9,4 +9,5 @@
 <bean id="address3" class="com.dm.spring.autowire.Address" p:street="wuDaoKou" parent="address2"></bean>
 <bean id="car22" class="com.dm.spring.autowire.Car" p:brand="BMW" p:price="1000000"></bean>
 <bean id="person" class="com.dm.spring.autowire.Person" p:name="dm" p:address-ref="address2" p:car-ref="car22" depends-on="car22"></bean>
+
 </beans>
