@@ -7,7 +7,15 @@ public class NewPerson {
 	private String name;
 	private int age;
 	
-	private Map<String, Car> cars ;
+	private Car cars ;
+
+	public Car getCars() {
+		return cars;
+	}
+
+	public void setCars(Car cars) {
+		this.cars = cars;
+	}
 
 	public String getName() {
 		return name;
@@ -25,21 +33,11 @@ public class NewPerson {
 		this.age = age;
 	}
 
-	public Map<String, Car> getCars() {
-		return cars;
-	}
-
-	public void setCars(Map<String, Car> cars) {
-		this.cars = cars;
-	}
-
 	@Override
 	public String toString() {
 		return "NewPerson [name=" + name + ", age=" + age + ", cars=" + cars
 				+ "]";
 	}
-	
-	
-	
+
 	
 }

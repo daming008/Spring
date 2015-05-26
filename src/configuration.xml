@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 <bean id="helloWorld" 
 	class="com.dm.spring.helloWorld.HelloWorld">
 	<property name="name" value="ldm"></property>
@@ -9,7 +12,7 @@
 
 <bean id="car1" class="com.dm.spring.helloWorld.Car">
 	<property name="brand" value="benchi"></property>
-	<property name="company" value="shagnhai"></property>
+	<property name="company" value="shanghai"></property>
 </bean>
 
 <bean id="car2" class="com.dm.spring.helloWorld.Car">
@@ -17,6 +20,22 @@
 	<property name="company" value="England"></property>
 </bean>
 
+<util:list id="carss">
+	<ref bean="car1"/>
+	<ref bean="car2"/>
+</util:list>
+ 
+<bean id="newPerson3" class="com.dm.spring.helloWorld.NewPerson">
+	<property name="name" value="TXY"></property>
+	<property name="age" value="24"></property>
+	<property name="cars" ref="car1"></property>
+</bean>
+
+ <bean id="newPerson2" class="com.dm.spring.helloWorld.NewPerson" p:name="TXY" p:age="24" p:cars-ref="car1">
+ </bean>
+
+ 
+ <!--  
 <bean id="newPerson" class="com.dm.spring.helloWorld.NewPerson">
 	<property name="name" value="lideming"></property>
 	<property name="age" value="25"></property>
@@ -27,4 +46,5 @@
 		</map>
 	</property>
 </bean>
+-->
 </beans>
