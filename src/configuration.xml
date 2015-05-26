@@ -7,4 +7,24 @@
 	<property name="name" value="ldm"></property>
 </bean>
 
+<bean id="car1" class="com.dm.spring.helloWorld.Car">
+	<property name="brand" value="benchi"></property>
+	<property name="company" value="shagnhai"></property>
+</bean>
+
+<bean id="car2" class="com.dm.spring.helloWorld.Car">
+	<property name="brand" value="baoma"></property>
+	<property name="company" value="England"></property>
+</bean>
+
+<bean id="newPerson" class="com.dm.spring.helloWorld.NewPerson">
+	<property name="name" value="lideming"></property>
+	<property name="age" value="25"></property>
+	<property name="cars">
+		<map>
+			<entry key="AA" value-ref="car1"></entry>
+			<entry key="BB" value-ref="car2"></entry>
+		</map>
+	</property>
+</bean>
 </beans>

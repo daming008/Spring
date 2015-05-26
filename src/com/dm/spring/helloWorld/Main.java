@@ -8,5 +8,7 @@ public class Main {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("configuration.xml");
 		HelloWorld helloWorld = (HelloWorld) ctx.getBean("helloWorld");
 		helloWorld.say();
+		NewPerson newPerson = (NewPerson) ctx.getBean("newPerson");
+		System.out.println(newPerson);
 	}
 }
